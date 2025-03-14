@@ -1,5 +1,10 @@
 import request from 'supertest';
 import app from '../app.js';
+import { server } from '../server.js';
+
+// afterAll(() => {
+//     server.close(); 
+// });
 
 describe('Auth API Tests', () => {
     it('Should register a new user', async () => {
