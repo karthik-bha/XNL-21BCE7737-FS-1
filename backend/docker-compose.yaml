@@ -1,0 +1,19 @@
+
+services:
+  backend:
+    build: .
+    container_name: backend
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - MONGO_URL=mongodb+srv://karthikbhatpro:karthik123@bookeasy.oqliy.mongodb.net/Fintech?retryWrites=true&w=majority
+      - JWT_SECRET="Secret#123"
+
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

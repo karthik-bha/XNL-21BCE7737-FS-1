@@ -1,0 +1,18 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Docker-related files
+docker-compose.yml
+
+# Environment files
+.env
+
+# Git-related files
+.git/
+.gitignore
+
+# Temporary files
+*.tmp

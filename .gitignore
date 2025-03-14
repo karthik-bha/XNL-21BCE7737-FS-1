@@ -22,3 +22,7 @@ Thumbs.db
 # IDE settings
 .vscode/
 .idea/
+
+# Dockerfiles and related files
+**/docker-compose.yml
+
