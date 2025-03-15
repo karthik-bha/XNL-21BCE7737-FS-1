@@ -5,7 +5,7 @@ const Landing = () => {
     return (
         <div className='parent-container'>
             <div className='secondary-container'>
-                <h2 className='text-center text-2xl my-4'>Welcome to the FinTech platform</h2>
+                <h2 className='text-center text-2xl md:text-4xl my-4'>Welcome to the FinTech platform</h2>
                 <div className='flex gap-4'>
                     <Link to="/login"><button className='btn-primary'>Login</button></Link>
                     <Link to="/register"><button className='btn-primary'>Register</button></Link>                  

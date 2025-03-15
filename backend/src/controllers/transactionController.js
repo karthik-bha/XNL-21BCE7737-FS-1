@@ -135,6 +135,28 @@ export const getUserTransactions = async (req, res) => {
 };
 
 
+export const getAllTransactions = async (req, res) => {
+    try {
+        await connectDB();
+
+        const transactions = await Transaction.find()
+            .populate('sender', 'name')
+            .populate('receiver', 'name')
+            .sort({ createdAt: -1 })
+            .exec(); 
+
+        if (!transactions.length) {
+            return res.status(200).json({ message: "No transactions found." });
+        }
+
+        return res.status(200).json(transactions);
+    } catch (err) {
+        console.error("Error fetching transactions:", err);
+        res.status(500).json({ message: "Internal Server Error" });
+    }
+};
+
+
 // Update transaction status
 export const updateTransactionStatus = async (req, res) => {
     try {

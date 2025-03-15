@@ -2,7 +2,12 @@ import React from 'react'
 
 const Unauthorized = () => {
   return (
-    <div>Unauthorized</div>
+    <div className='parent-container'>
+      <div className='secondary-container '>
+        <p className='text-2xl'>Unauthorized</p>
+        <p>You are not authorized to access this page.</p>
+      </div>
+    </div>
   )
 }
 

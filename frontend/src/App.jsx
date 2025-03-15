@@ -11,12 +11,7 @@ import Unauthorized from './components/Unauthorized'
 
 function App() {
   const PrivateRoute = ({ children, requiredRole }) => {
-
-
-
     const { user, token, loading } = useAuth();
-    // console.log(token);
-    // console.log(localStorage.getItem('token'));
 
     if (loading) {
       return <div>Loading...</div>;

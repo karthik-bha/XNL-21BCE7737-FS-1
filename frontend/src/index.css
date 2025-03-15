@@ -1,11 +1,14 @@
 @import "tailwindcss";
-
+body{
+  background-color:  #121130 ;
+  color: white;
+}
 .btn-primary{
-  @apply bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded cursor-pointer
+  @apply bg-black hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg hover:cursor-pointer
 }
 
 .parent-container{
-  @apply h-[100vh] w-[100vw] flex
+  @apply h-[100vh] w-[100vw] flex 
 }
 
 .secondary-container{
@@ -17,5 +20,5 @@
 }
 
 .form-container{
-  @apply flex flex-col gap-4 p-6 rounded-lg border  border-gray-300
+  @apply flex bg-[#1d1d41] flex-col gap-4 p-6 rounded-lg border border-gray-900
 }

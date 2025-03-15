@@ -1,19 +1,22 @@
 // TransactionForm.js
 import React, { useState, useEffect } from 'react';
 
-const TransactionForm = ({ userId, users, handleTransactionSubmit, transactionType, setTransactionType, receiver, setReceiver, amount, setAmount }) => {
+const TransactionForm = ({ userId, users, setShowTransactionForm, handleTransactionSubmit, transactionType, setTransactionType, receiver, setReceiver, amount, setAmount }) => {
 
   return (
     <>
-      <h3 className="text-2xl font-medium text-gray-800 mb-4">Make a Transaction</h3>
+      <div className='flex justify-between'>
+        <h3 className="text-2xl font-medium mb-4">Make a Transaction</h3>
+        <button className='text-2xl hover:cursor-pointer' onClick={() => setShowTransactionForm(false)}>x</button>
+      </div>
       <form onSubmit={handleTransactionSubmit} className="space-y-6">
         <div>
-          <label htmlFor="transactionType" className="block text-lg font-medium text-gray-700">Transaction Type</label>
+          <label htmlFor="transactionType" className="block text-lg font-medium ">Transaction Type</label>
           <select
             id="transactionType"
             value={transactionType}
             onChange={(e) => setTransactionType(e.target.value)}
-            className="w-full p-2 mt-2 border border-gray-300 rounded-md"
+            className="w-full p-2 mt-2 border bg-[#1d1d41]  border-gray-300 rounded-md "
           >
             <option value="deposit">Deposit</option>
             <option value="withdrawal">Withdrawal</option>
@@ -23,13 +26,13 @@ const TransactionForm = ({ userId, users, handleTransactionSubmit, transactionTy
 
         {transactionType !== 'deposit' && transactionType !== 'withdrawal' && (
           <div>
-            <label htmlFor="receiver" className="block text-lg font-medium text-gray-700">Receiver</label>
+            <label htmlFor="receiver" className="block text-lg font-medium ">Receiver</label>
             <select
               id="receiver"
               value={receiver}
               onChange={(e) => setReceiver(e.target.value)}
               required
-              className="w-full p-2 mt-2 border border-gray-300 rounded-md"
+              className="w-full p-2 mt-2 border bg-[#1d1d41]  border-gray-300 rounded-md"
             >
               <option value="">Select Receiver</option>
               {users.map((user) => (
@@ -42,7 +45,7 @@ const TransactionForm = ({ userId, users, handleTransactionSubmit, transactionTy
         )}
 
         <div>
-          <label htmlFor="amount" className="block text-lg font-medium text-gray-700">Amount</label>
+          <label htmlFor="amount" className="block text-lg font-medium ">Amount</label>
           <input
             type="number"
             id="amount"
@@ -57,9 +60,9 @@ const TransactionForm = ({ userId, users, handleTransactionSubmit, transactionTy
 
         <button
           type="submit"
-          className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300"
+          className="btn-primary transition duration-300"
         >
-          Make Transaction
+          Make a Transaction
         </button>
       </form>
     </>

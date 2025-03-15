@@ -1,5 +1,18 @@
 # DOCS
 
+## Pre-Credentials for convenience
+
+### For Role: Customer
+- **Email:** customer@gmail.com | **Password:** test123  
+- **Email:** raja@gmail.com | **Password:** test123  
+- **Email:** customer2@gmail.com | **Password:** test123  
+
+### For Role: Admin
+- **Email:** admin@gmail.com | **Password:** test123  
+
+### For Role: Advisor
+- **Email:** advisor@gmail.com | **Password:** test123  
+
 # Backend Setup Documentation
 
 ## 1. Project Initialization

@@ -9,7 +9,7 @@ const TransactionChart = ({ transactions }) => {
   // Check if transactions are available
   if (!transactions || transactions.length === 0) {
     return (
-      <div className="text-center py-6 text-lg text-gray-600">
+      <div className="text-center py-6 text-lg">
         No transaction data available for charting.
       </div>
     );
